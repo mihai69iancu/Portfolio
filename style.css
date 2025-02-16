@@ -4,27 +4,51 @@ html, body {
     box-sizing: border-box;
 }
 
-.top {
+.main-page {
     width: 100%;
-    height: 1500px;
-    background-color: #002244; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    color: white; 
-    font-family: Arial, sans-serif; 
-    padding-top: -1000px;
-    justify-content: flex-start;
 }
 
-  .top h1 {
-    padding-top: 500px;
+.top {
+    width: 100%;
+    height: 1250px;
+    background-color: #002244; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white; 
+    font-family: Arial, sans-serif;
+    
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.6);
+    margin-top: -200px;
+}
+
+.text {
+    text-align: left;
+}
+
+.top h1 {
     font-size: 5rem;
     margin: 0;
-    padding-right: 300px;
+    margin-top: -200px;
 }
+
 .top h2 {
     margin-top: 10px;
     width: 80%; 
@@ -32,12 +56,125 @@ html, body {
     padding: 10px 15px;
     font-size: 1.2rem;
     line-height: 1.5;
-    text-align: center;
-
 }
-.bottom{
-    width: 100%;
-    height: 1000px;
-    background-color: white; 
 
+.bottom {
+    width: 100%;
+    height: 1500px;
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Explicitly define 3 columns */
+    gap: 20px; /* Space between rectangles */
+    width: 100%;
+    max-width: 1200px; /* Limit container width for larger screens */
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.rectangle {
+    width: 100%; /* Make rectangles responsive to container width */
+    height: 400px; /* Adjust height to fit the fixed image size and title */
+    background-color: #3498db;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure the image doesn't overflow the rectangle */
+    position: relative; /* Needed for absolute positioning of the image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the bottom */
+    padding-bottom: 20px; /* Add space below the title */
+}
+
+.rectangle h1{
+        padding-left: 10px;
+        font-size: 2rem;
+        margin: 0;
+        color: white; /* Set text color */
+    
+ 
+}
+
+.image-1 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: center center;
+}
+.image-2 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: center center;
+}
+.image-3 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: center top;
+}
+.image-4 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: center top;
+}
+.image-5 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: center top;
+}
+.image-6 {
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the rectangle without distortion */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    position: absolute; /* Position the image absolutely within the rectangle */
+    top: 0; /* Align the image to the top */
+    left: 0; 
+    object-position: 30% 20%;
+}
+
+.rectangle:hover {
+    transform: translateY(-10px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .rectangle-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .rectangle-container {
+        grid-template-columns: 1fr; /* Switch to 1 column on very small screens */
+    }
 }
