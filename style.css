@@ -152,14 +152,14 @@ html, body {
     object-position: center top;
 }
 .image-6 {
-    width: 300px; /* Make the image fill the rectangle width */
-    height: 200px; /* Let the height adjust automatically to maintain aspect ratio */
+    width: 100%; /* Make the image fill the rectangle width */
+    height: 40%; /* Let the height adjust automatically to maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the rectangle without distortion */
     border-radius: 10px 10px 0 0; /* Round only the top corners */
     position: absolute; /* Position the image absolutely within the rectangle */
     top: 0; /* Align the image to the top */
-    left: 40px; 
-    object-position: center center;
+    left: 0; 
+    object-position: center top;
 
 }
 
